@@ -2,7 +2,8 @@
 ##  File:  Install-GoogleCloudSDK.ps1
 ##  Desc:  Install Google Cloud SDK
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 # https://cloud.google.com/sdk/docs/downloads-interactive
 $googleCloudSDKInstaller = "https://dl.google.com/dl/cloudsdk/channels/rapid/GoogleCloudSDKInstaller.exe"
 $argumentList = @("/S", "/allusers", "/noreporting")

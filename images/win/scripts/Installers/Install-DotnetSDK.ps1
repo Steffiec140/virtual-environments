@@ -3,7 +3,8 @@
 ##  Desc:  Install all released versions of the dotnet sdk and populate package
 ##         cache.  Should run after VS and Node
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 # ensure temp
 New-Item -Path C:\Temp -Force -ItemType Directory
 

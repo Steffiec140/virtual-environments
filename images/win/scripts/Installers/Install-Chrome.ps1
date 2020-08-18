@@ -2,6 +2,8 @@
 ##  File:  Install-Chrome.ps1
 ##  Desc:  Install Google Chrome
 ################################################################################
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 
 Import-Module -Name ImageHelpers -Force
 

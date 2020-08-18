@@ -2,7 +2,8 @@
 ##  File:  Install-NET48.ps1
 ##  Desc:  Install .NET 4.8
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Import-Module -Name ImageHelpers -Force
 
 # .NET 4.8 Dev pack

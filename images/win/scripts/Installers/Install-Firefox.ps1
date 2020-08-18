@@ -2,7 +2,8 @@
 ##  File:  Install-Firefox.ps1
 ##  Desc:  Install Mozilla Firefox
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Import-Module -Name ImageHelpers -Force
 
 # Install and configure Firefox browser

@@ -1,3 +1,5 @@
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 $ErrorActionPreference = "Stop"
 
 # Set TLS1.2

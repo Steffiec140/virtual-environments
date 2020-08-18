@@ -2,7 +2,8 @@
 ##  File:  Install-Selenium.ps1
 ##  Desc:  Install Selenium Server standalone
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Import-Module -Name ImageHelpers -Force
 
 # Acquire latest Selenium release number from GitHub API

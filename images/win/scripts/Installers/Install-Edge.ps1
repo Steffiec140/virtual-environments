@@ -2,7 +2,8 @@
 ##  File:  Install-Edge.ps1
 ##  Desc:  Install latest stable version of Microsoft Edge browser
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Choco-Install -PackageName microsoft-edge
 
 # Install Microsoft Edge WebDriver

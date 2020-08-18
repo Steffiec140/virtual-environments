@@ -2,7 +2,8 @@
 ##  File:  Install-VS.ps1
 ##  Desc:  Install Visual Studio
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 $ErrorActionPreference = "Stop"
 
 $toolset = Get-ToolsetContent

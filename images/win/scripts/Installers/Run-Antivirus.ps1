@@ -3,7 +3,8 @@
 ##  Desc:  Run a full antivirus scan.
 ##         Run right after cleanup before we sysprep
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 if ($env:run_scan_antivirus -eq $true) {
     try {
         Update-MpSignature

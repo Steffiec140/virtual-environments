@@ -2,7 +2,8 @@
 ##  File:  Install-DACFx.ps1
 ##  Desc:  Install SQL Server® Data-Tier Application Framework (DACFx) for Windows
 ####################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Import-Module -Name ImageHelpers -Force
 
 $InstallerName = "DacFramework.msi"

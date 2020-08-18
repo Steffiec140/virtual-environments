@@ -1,7 +1,8 @@
 # https://www.sysadmins.lv/blog-en/how-to-retrieve-certificate-purposes-property-with-cryptoapi-and-powershell.aspx
 # https://www.sysadmins.lv/blog-en/dump-authroot-and-disallowed-certificates-with-powershell.aspx
 # https://www.sysadmins.lv/blog-en/constraining-extended-key-usages-in-microsoft-windows.aspx
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 function Add-ExtendedCertType {
     $signature = @"
         [DllImport("Crypt32.dll", SetLastError = true, CharSet = CharSet.Auto)]

@@ -2,6 +2,8 @@
 ##  File:  Install-AzureModules.ps1
 ##  Desc:  Install Azure PowerShell modules
 ################################################################################
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 
 $ErrorActionPreference = "Stop"
 

@@ -2,7 +2,8 @@
 ##  File:  Install-Msys2.ps1
 ##  Desc:  Install Msys2 and 64 & 32 bit gcc, cmake, & llvm
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 # References
 # https://github.com/msys2/MINGW-packages/blob/master/azure-pipelines.yml
 # https://packages.msys2.org/group/

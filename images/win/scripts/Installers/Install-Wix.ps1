@@ -2,7 +2,8 @@
 ##  File:  Install-Wix.ps1
 ##  Desc:  Install WIX.
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Import-Module -Name ImageHelpers -Force
 
 Choco-Install -PackageName wixtoolset -ArgumentList "--force"

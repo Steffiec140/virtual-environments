@@ -2,7 +2,8 @@
 ##  File:  Install-Mingw64.ps1
 ##  Desc:  Install GNU tools for Windows
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Choco-Install -PackageName mingw
 
 # Make a copy of mingw32-make.exe to make.exe, which is a more discoverable name

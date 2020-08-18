@@ -2,7 +2,8 @@
 ##  File:  Install-Stack.ps1
 ##  Desc:  Install Stack for Windows
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Write-Host "Get the latest Stack version..."
 $StackReleasesJson = Invoke-RestMethod "https://api.github.com/repos/commercialhaskell/stack/releases/latest"
 $Version = $StackReleasesJson.name.TrimStart("v")

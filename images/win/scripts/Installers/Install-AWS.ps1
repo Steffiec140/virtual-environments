@@ -3,6 +3,9 @@
 ##  Desc:  Install AWS tools(AWS CLI, Session Manager Plugin for the AWS CLI, AWS SAM CLI)
 ################################################################################
 
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
+
 # Install AWS CLI
 Choco-Install -PackageName awscli
 

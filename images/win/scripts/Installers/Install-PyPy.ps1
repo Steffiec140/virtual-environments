@@ -3,6 +3,8 @@
 ##  Team:  CI-Build
 ##  Desc:  Install PyPy
 ################################################################################
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 function Get-PyPyVersions
 {
     $uri = "https://downloads.python.org/pypy/"

@@ -2,7 +2,8 @@
 ##  File:  Install-SeleniumWebDrivers.ps1
 ##  Desc:  Install Selenium Web Drivers
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 try {
     $latestReleaseUrl = "https://selenium-release.storage.googleapis.com/"
     $latestReleaseInfo = Invoke-RestMethod -Uri $latestReleaseUrl

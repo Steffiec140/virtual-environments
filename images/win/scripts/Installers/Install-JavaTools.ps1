@@ -2,7 +2,8 @@
 ##  File:  Install-JavaTools.ps1
 ##  Desc:  Install various JDKs and java tools
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Import-Module -Name ImageHelpers -Force
 
 function Set-JavaPath {

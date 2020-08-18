@@ -2,6 +2,8 @@
 ##  File:  Install-AzureCosmosDbEmulator.ps1
 ##  Desc:  Install Azure CosmosDb Emulator
 ####################################################################################
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 
 Import-Module -Name ImageHelpers -Force
 

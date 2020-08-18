@@ -2,7 +2,8 @@
 ##  File:  Install-Miniconda.ps1
 ##  Desc:  Install the latest version of Miniconda and set $env:CONDA
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Import-Module -Name ImageHelpers -Force
 
 $CondaDestination = "C:\Miniconda"

@@ -1,3 +1,6 @@
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
+
 Import-Module MarkdownPS
 Import-Module (Join-Path $PSScriptRoot "SoftwareReport.Android.psm1") -DisableNameChecking
 Import-Module (Join-Path $PSScriptRoot "SoftwareReport.Browsers.psm1") -DisableNameChecking

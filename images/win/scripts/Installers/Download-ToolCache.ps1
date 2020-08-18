@@ -3,7 +3,8 @@
 ##  Team:  CI-Build
 ##  Desc:  Download tool cache
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Function Install-NpmPackage {
     [CmdletBinding()]
     param(

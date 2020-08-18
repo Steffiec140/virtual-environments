@@ -2,7 +2,8 @@
 ##  File:  Install-MysqlCli.ps1
 ##  Desc:  Install Mysql CLI
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 ## Downloading mysql jar
 $MysqlVersionName = "mysql-5.7.21-winx64"
 $MysqlVersionUrl = "https://dev.mysql.com/get/Downloads/MySQL-5.7/${MysqlVersionName}.zip"

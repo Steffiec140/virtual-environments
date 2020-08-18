@@ -2,7 +2,8 @@
 ##  File:  Install-Kind.ps1
 ##  Desc:  Install Kind
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 function Get-LatestRelease
 {
     $url = 'https://api.github.com/repos/kubernetes-sigs/kind/releases/latest'

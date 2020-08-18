@@ -2,7 +2,8 @@
 ##  File:  Install-Git.ps1
 ##  Desc:  Install Git for Windows
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Import-Module -Name ImageHelpers
 
 function getSimpleValue([string] $url, [string] $filename ) {

@@ -2,7 +2,8 @@
 ##  File:  Update-DotnetTLS.ps1
 ##  Desc:  Update DotNetFramework security protocol to TLS 1.2
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 $registryPath = "HKLM:\SOFTWARE\Microsoft\.NETFramework\v4.0.30319"
 $name = "SchUseStrongCrypto"
 $value = "1"

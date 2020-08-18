@@ -3,7 +3,8 @@
 ##  Desc:  Pull some standard docker images.
 ##         Must be run after docker is installed.
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 function DockerPull {
     Param ([string]$image)
 

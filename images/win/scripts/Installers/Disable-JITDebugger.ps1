@@ -1,3 +1,6 @@
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
+
 Write-Host "Disable Just-In-Time Debugger"
 
 # Turn off Application Error Debugger

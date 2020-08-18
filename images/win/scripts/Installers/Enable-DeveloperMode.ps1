@@ -1,8 +1,9 @@
 ################################################################################
 ##  File:  Enable-DeveloperMode.ps1
-##  Desc:  Enables Developer Mode by toggling registry setting. Developer Mode is required to enable certain tools (e.g. WinAppDriver). 
+##  Desc:  Enables Developer Mode by toggling registry setting. Developer Mode is required to enable certain tools (e.g. WinAppDriver).
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 # Create AppModelUnlock if it doesn't exist, required for enabling Developer Mode
 $RegistryKeyPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock"
 if (-not(Test-Path -Path $RegistryKeyPath)) {

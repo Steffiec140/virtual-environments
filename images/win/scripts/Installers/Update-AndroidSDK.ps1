@@ -2,7 +2,8 @@
 ##  File:  Update-AndroidSDK.ps1
 ##  Desc:  Install and update Android SDK and tools
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 # Download the latest command line tools so that we can accept all of the licenses.
 # See https://developer.android.com/studio/#command-tools
 $sdkArchPath = Start-DownloadWithRetry -Url "https://dl.google.com/android/repository/sdk-tools-windows-4333796.zip" -Name "android-sdk-tools.zip"

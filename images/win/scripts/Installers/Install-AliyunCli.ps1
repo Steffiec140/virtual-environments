@@ -3,6 +3,9 @@
 ##  Desc:  Install Alibaba Cloud CLI
 ################################################################################
 
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
+
 Write-Host "Download Latest aliyun-cli archive"
 $url = 'https://api.github.com/repos/aliyun/aliyun-cli/releases/latest'
 # Explicitly set type to string since match returns array by default

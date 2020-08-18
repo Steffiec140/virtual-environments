@@ -3,7 +3,8 @@
 ##  Desc:  Install webpicmd and then the service fabric sdk
 ##         must be install after Visual Studio
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 #Creating 'Installer' cache folder if it doesn't exist
 $temp_install_dir = 'C:\Windows\Installer'
 New-Item -Path $temp_install_dir -ItemType Directory -Force

@@ -2,7 +2,8 @@
 ##  File:  Install-CloudFoundryCli.ps1
 ##  Desc:  Install Cloud Foundry CLI
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Import-Module -Name ImageHelpers
 
 # Download the latest cf cli exe

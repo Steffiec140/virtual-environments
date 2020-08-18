@@ -2,6 +2,8 @@
 ##  File:  Install-PHP.ps1
 ##  Desc:  Install PHP
 ################################################################################
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 $ErrorActionPreference = "Stop"
 
 Import-Module -Name ImageHelpers

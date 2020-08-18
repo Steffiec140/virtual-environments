@@ -3,7 +3,8 @@
 ##  Desc:  Install sbt for Windows
 ################################################################################
 $ErrorActionPreference = "Stop"
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Import-Module -Name ImageHelpers
 
 # Install the latest version of sbt.

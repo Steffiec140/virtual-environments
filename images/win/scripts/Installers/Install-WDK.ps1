@@ -2,7 +2,8 @@
 ##  File:  Install-WDK.ps1
 ##  Desc:  Install the Windows Driver Kit
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 # Requires Windows SDK with the same version number as the WDK
 
 Import-Module -Name ImageHelpers -Force

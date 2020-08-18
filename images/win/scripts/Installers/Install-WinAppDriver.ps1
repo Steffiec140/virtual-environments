@@ -2,7 +2,8 @@
 ##  File:  Install-WinAppDriver.ps1
 ##  Desc:  Install Windows Application Driver (WinAppDriver)
 ####################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Import-Module -Name ImageHelpers -Force
 
 $InstallerName = "WindowsApplicationDriver.msi"

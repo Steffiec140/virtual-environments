@@ -2,7 +2,8 @@
 ##  File:  Finalize-VM.ps1
 ##  Desc:  Clean up temp folders after installs to save space
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Write-Host "Cleanup WinSxS"
 Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
 
@@ -31,3 +32,5 @@ $winInstallDir = "$env:windir\\Installer"
 New-Item -Path $winInstallDir -ItemType Directory -Force
 
 $ErrorActionPreference = 'Continue'
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp

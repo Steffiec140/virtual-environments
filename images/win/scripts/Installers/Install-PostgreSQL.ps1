@@ -1,3 +1,5 @@
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 $ErrorActionPreference = "Stop"
 
 #Define user and password for PostgreSQL database

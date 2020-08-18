@@ -4,7 +4,8 @@
 ##         Must be an independent step becuase it requires a machine restart
 ##         before we can continue.
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Write-Host "Install Containers feature"
 Install-WindowsFeature -Name Containers
 
@@ -18,5 +19,3 @@ if ($cpu.VirtualizationFirmwareEnabled -and $cpu.SecondLevelAddressTranslationEx
 
 Invoke-PesterTests -TestFile "WindowsFeatures" -TestName "ContainersFeature"
 
-Write-Host "Display ports"
-netsh int ipv4 show dynamicport tcp

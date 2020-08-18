@@ -2,7 +2,8 @@
 ##  File:  Install-Rust.ps1
 ##  Desc:  Install Rust for Windows
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Import-Module -Name ImageHelpers
 
 # Rust Env

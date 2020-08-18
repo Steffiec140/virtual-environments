@@ -3,7 +3,8 @@
 ##  Desc:  Install nodejs-lts and other common node tools.
 ##         Must run after python is configured
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Import-Module -Name ImageHelpers -Force
 
 $PrefixPath = 'C:\npm\prefix'

@@ -2,7 +2,8 @@
 ##  File:  Install-Vcpkg.ps1
 ##  Desc:  Install vcpkg
 ################################################################################
-
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
 Import-Module -Name ImageHelpers -Force
 
 $Uri = 'https://github.com/Microsoft/vcpkg.git'
