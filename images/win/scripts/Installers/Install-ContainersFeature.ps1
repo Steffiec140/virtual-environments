@@ -17,3 +17,6 @@ if ($cpu.VirtualizationFirmwareEnabled -and $cpu.SecondLevelAddressTranslationEx
 }
 
 Invoke-PesterTests -TestFile "WindowsFeatures" -TestName "ContainersFeature"
+
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp

@@ -128,3 +128,6 @@ Write-Host $expandResult
 
 Write-Host "Disk sizes after expansion"
 wmic logicaldisk get size,freespace,caption
+
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp

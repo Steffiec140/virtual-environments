@@ -31,3 +31,6 @@ if (Test-IsWin19) {
 }
 
 DockerPull microsoft/aspnetcore-build:1.0-2.0
+
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp

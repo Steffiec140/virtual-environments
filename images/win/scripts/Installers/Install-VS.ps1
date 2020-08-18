@@ -50,3 +50,6 @@ if (Test-IsWin19) {
 }
 
 Invoke-PesterTests -TestFile "VisualStudio"
+
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp

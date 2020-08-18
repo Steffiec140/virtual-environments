@@ -16,3 +16,6 @@ Write-Host "Install Helm"
 Choco-Install -PackageName kubernetes-helm
 
 Invoke-PesterTests -TestFile "Tools" -TestName "Docker"
+
+Write-Host "Display ports"
+netsh int ipv4 show dynamicport tcp
