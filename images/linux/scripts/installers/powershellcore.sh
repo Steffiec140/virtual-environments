@@ -33,6 +33,6 @@ ls -la /imagegeneration
 echo "SoftwareReports"
 ls -la /imagegeneration/SoftwareReport
 # Document what was added to the image
-pwsh -File '/imagegeneration/SoftwareReport/SoftwareReport.Generator.ps1' -OutputDirectory '/imagegeneration'
+#pwsh -File '/imagegeneration/SoftwareReport/SoftwareReport.Generator.ps1' -OutputDirectory '/imagegeneration'
 #
-ls -la /imagegeneration
+#ls -la /imagegeneration
