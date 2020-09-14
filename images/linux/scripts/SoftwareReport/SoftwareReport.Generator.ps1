@@ -4,7 +4,7 @@ param (
 )
 
 # Install MarkdownPS module for software report generation
-Install-Module MarkdownPS -Force -Scope CurrentUser
+Install-Module MarkdownPS -Force
 Import-Module MarkdownPS
 
 $markdown = ""
