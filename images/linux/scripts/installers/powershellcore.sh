@@ -33,5 +33,6 @@ ls -la /imagegeneration
 echo "SoftwareReports"
 ls -la /imagegeneration/SoftwareReport
 # Document what was added to the image
-echo "Lastly, documenting what we added to the metadata file"
-DocumentInstalledItem "Powershell ($(pwsh --version))"
+pwsh -File '/imagegeneration/SoftwareReport/SoftwareReport.Generator.ps1' -OutputDirectory '/imagegeneration'
+#
+ls -la /imagegeneration

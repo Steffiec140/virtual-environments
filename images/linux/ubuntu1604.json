@@ -113,10 +113,7 @@
         {
             "type": "powershell",
             "inline": [
-                "Get-ChildItem {{user `image_folder`}}",
-                "Get-ChildItem {{user `image_folder`}}/SoftwareReport",
-                "pwsh -File '{{user `image_folder`}}/SoftwareReport/SoftwareReport.Generator.ps1' -OutputDirectory '{{user `image_folder`}}'",
-                "Get-ChildItem {{user `image_folder`}}"
+                "pwsh -File '{{user `image_folder`}}/SoftwareReport/SoftwareReport.Generator.ps1' -OutputDirectory '{{user `image_folder`}}'"
             ],
             "environment_vars":[
                 "INSTALLER_SCRIPT_FOLDER={{user `installer_script_folder`}}",
