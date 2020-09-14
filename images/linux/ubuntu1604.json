@@ -74,11 +74,6 @@
             "execute_command": "sudo sh -c '{{ .Vars }} {{ .Path }}'"
         },
         {
-            "type": "shell",
-            "script": "{{template_dir}}/scripts/installers/powershellcore.sh",
-            "execute_command": "sudo sh -c '{{ .Vars }} {{ .Path }}'"
-        },
-        {
             "type": "file",
             "source": "{{template_dir}}/scripts/helpers",
             "destination": "{{user `helper_script_folder`}}"
@@ -87,6 +82,11 @@
             "type": "file",
             "source": "{{template_dir}}/scripts/installers",
             "destination": "{{user `installer_script_folder`}}"
+        },
+        {
+            "type": "shell",
+            "script": "{{template_dir}}/scripts/installers/powershellcore.sh",
+            "execute_command": "sudo sh -c '{{ .Vars }} {{ .Path }}'"
         },
         {
             "type": "file",
@@ -106,6 +106,7 @@
         {
             "type": "powershell",
             "inline": [
+                "Get-ChildItem {{user `image_folder`}}",
                 "Get-ChildItem {{user `image_folder`}}/SoftwareReport",
                 "pwsh -File '{{user `image_folder`}}/SoftwareReport/SoftwareReport.Generator.ps1' -OutputDirectory '{{user `image_folder`}}'",
                 "Get-ChildItem {{user `image_folder`}}"
